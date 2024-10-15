@@ -1,6 +1,6 @@
 
 ;;; setting theme-----------------------------------------------------------------------------------------
-(setq doom-theme 'black)
+(setq doom-theme 'doom-tokyo-night)
 ;;;----------------------------------------------------------------------------------------- setting theme
 
 ;; relative line number ----------------------------------------------------------------------------------
@@ -22,8 +22,8 @@
 
 ;; transparency ------------------------------------------------------------------------------------------
 (unless (string= "" (shell-command-to-string "pgrep dwm"))
-  (set-frame-parameter (selected-frame) 'alpha-background 90)
-  (add-to-list 'default-frame-alist '(alpha-background . 90)))
+  (set-frame-parameter (selected-frame) 'alpha-background 100)
+  (add-to-list 'default-frame-alist '(alpha-background . 100)))
 ;; ------------------------------------------------------------------------------------------ transparency
 
 ;;; clangd config ----------------------------------------------------------------------------------------
