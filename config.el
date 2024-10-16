@@ -1,6 +1,6 @@
 
 ;;; setting theme-----------------------------------------------------------------------------------------
-(setq doom-theme 'doom-tokyo-night)
+(setq doom-theme 'black)
 ;;;----------------------------------------------------------------------------------------- setting theme
 
 ;; relative line number ----------------------------------------------------------------------------------
@@ -14,7 +14,7 @@
 
 ;; font --------------------------------------------------------------------------------------------------
 (setq doom-font (font-spec :family "RobotoMono Nerd Font" :size 24 :weight 'light)
-      doom-variable-pitch-font (font-spec :family "Visomatic_Electrite") ; inherits `doom-font''s :size
+      doom-variable-pitch-font (font-spec :family "NotoSans Nerd Font") ; inherits `doom-font''s :size
       doom-symbol-font (font-spec :family "Symbols Nerd Font Mono" :size 24)
       doom-big-font (font-spec :family "Open Sans" :size 30))
 
@@ -89,7 +89,7 @@
 ;;; dashboard ---------------------------------------------------------------------------------------------
 (remove-hook '+doom-dashboard-functions #'doom-dashboard-widget-shortmenu)
 (remove-hook '+doom-dashboard-functions #'doom-dashboard-widget-footer)
-(setq +doom-dashboard-banner-file (expand-file-name "images/doom.png" doom-user-dir))
+(setq +doom-dashboard-Banner-file (expand-file-name "images/doom.png" doom-user-dir))
 ;;; --------------------------------------------------------------------------------------------- dashboard
 
 ;;; modeline ----------------------------------------------------------------------------------------------
@@ -205,7 +205,7 @@
                   (org-level-6 . 1.1)
                   (org-level-7 . 1.1)
                   (org-level-8 . 1.1)))
-    (set-face-attribute (car face) nil :font "Inconsolata Nerd Font Propo" :weight 'regular :height (cdr face) :slant 'unspecified))
+    (set-face-attribute (car face) nil :font "Lato Black" :weight 'regular :height (cdr face) :slant 'unspecified))
 
   ;; Ensure that anything that should be fixed-pitch in Org files appears that way
   (set-face-attribute 'org-tag nil :foreground nil :inherit '(shadow fixed-pitch) :weight 'bold)
@@ -237,8 +237,7 @@
 ;; ---------------------------------------------------------------------------------------------------------------- vertico
 
 ;; Padding ----------------------------------------------------------------------------------------------------------------
-(use-package spacious-padding
-  :ensure t
+(use-package! spacious-padding
   :if (display-graphic-p)
   :hook (after-init . spacious-padding-mode)
   :bind ("<f8>" . spacious-padding-mode)
